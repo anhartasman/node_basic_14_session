@@ -1,12 +1,12 @@
-# node_basic_13_mongoose
+# node_basic_14_session
 
-Mempelajari mongoose di node js
+Mempelajari session di node js
 
-## 211. Connecting to the MongoDB Server with Mongoose
+## 232. Login Menu
 
 ### Intro
 
-Menghubungkan server mongodb dengan mongoose
+Membuat login menu
  
 ## 212. Creating the Product Schema
 
