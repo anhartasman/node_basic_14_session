@@ -12,8 +12,15 @@ exports.postLogin = (req, res, next) => {
   User.findById("62b97a0854c5688e1bdf1237")
     .then((user) => {
       req.session.isLoggedIn = true;
-      req.session.user = user;
       res.redirect("/");
+      req.session.user = user;
     })
     .catch((err) => console.log(err));
+};
+
+exports.postLogout = (req, res, next) => {
+  req.session.destroy((err) => {
+    console.log(err);
+    res.redirect("/");
+  });
 };
