@@ -11,11 +11,11 @@ exports.getLogin = (req, res, next) => {
 exports.postLogin = (req, res, next) => {
   User.findById("62b97a0854c5688e1bdf1237")
     .then((user) => {
+      req.session.user = user;
       req.session.isLoggedIn = true;
       res.redirect("/");
-      req.session.user = user;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log("ada error " + err));
 };
 
 exports.postLogout = (req, res, next) => {
